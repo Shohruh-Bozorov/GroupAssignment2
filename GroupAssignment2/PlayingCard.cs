@@ -67,10 +67,12 @@ namespace GroupAssignment2
 		/// </summary>
 		public PlayingCard()
 		{
-		
+
 			//YOUR CODE
 			// write a constructor that generates a random card.
 			// I.e., PlayingCard card1 = new PlayingCard(); generates a random card.
+
+			PlayingCard card1 = new PlayingCard();
 		}
 	}
 }

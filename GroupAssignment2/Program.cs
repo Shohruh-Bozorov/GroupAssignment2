@@ -11,9 +11,11 @@ namespace GroupAssignment2
             Console.WriteLine(new PlayingCard());
             Console.WriteLine(new PlayingCard());
             Console.WriteLine(new PlayingCard());
-
+            
             DeckOfCards myDeck = new DeckOfCards();
             Console.WriteLine($"\nA freshly created deck with {myDeck.Count} cards:");
+
+            myDeck.FreshDeck();
             Console.WriteLine(myDeck);
 
             myDeck.Shuffle();

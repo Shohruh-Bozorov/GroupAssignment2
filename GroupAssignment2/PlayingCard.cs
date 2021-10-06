@@ -30,7 +30,7 @@ namespace GroupAssignment2
 				return "Red";
 			}
 		}
-		
+
 		/// <summary>
 		/// Returns "Face" for Ace,Knight, Queen, King. Otherwise it returns "Value".
 		/// 
@@ -75,7 +75,7 @@ namespace GroupAssignment2
 
 				*/
 			}
-	
+
 		}
 		public override string ToString() => $"{Value} of {Color}, a {BlackOrRed} {FaceOrValue} card";
 
@@ -89,7 +89,24 @@ namespace GroupAssignment2
 			// write a constructor that generates a random card.
 			// I.e., PlayingCard card1 = new PlayingCard(); generates a random card.
 
-			PlayingCard card1 = new PlayingCard();
+			//PlayingCard card1 = new PlayingCard();
+			Random randCard = new Random();
+			Color = (PlayingCardColor)randCard.Next(0, 4);
+			Value = (PlayingCardValue)randCard.Next(1, 15);
+
+
+
+
+
+
+		}
+
+		public PlayingCard(PlayingCardColor color, PlayingCardValue value) 
+		{
+
+			Color = color;
+			Value = value;
+
 		}
 	}
 }

@@ -36,29 +36,46 @@ namespace GroupAssignment2
 		/// 
 		/// </summary>
 		string FaceOrValue
-		{
-            get
-            {
-                switch (Value)
-                {
-                    
-                    case PlayingCardValue.Knight:
-                        break;
-                    case PlayingCardValue.Queen:
-                        break;
-                    case PlayingCardValue.King:
-                        break;
-                    case PlayingCardValue.Ace:
-                        break;
-                    default: return "Value";
-                       
-                }
-				return "Face";
-            }
 
-				//YOUR CODE
-				//to return "Face" or "Value"
-				//Use switch expression
+		{   //YOUR CODE
+			//to return "Face" or "Value"
+			//Use switch expression
+
+			get
+			{
+				switch (Value)
+				{
+
+					case PlayingCardValue.Knight:
+						break;
+					case PlayingCardValue.Queen:
+						break;
+					case PlayingCardValue.King:
+						break;
+					case PlayingCardValue.Ace:
+						break;
+					default: return "Value";
+
+				}
+				return "Face";
+
+
+
+				/*
+				 // switch expression
+				String FaceOrValue = Value switch
+						{
+					PlayingCardValue.Ace => FaceOrValue = "Face",
+							PlayingCardValue.Knight => FaceOrValue = "Face",
+							PlayingCardValue.Queen => FaceOrValue = "Face",
+							PlayingCardValue.King => FaceOrValue = "Face",
+							_ => FaceOrValue = "Value",
+						};
+					return FaceOrValue;
+
+				*/
+			}
+	
 		}
 		public override string ToString() => $"{Value} of {Color}, a {BlackOrRed} {FaceOrValue} card";
 

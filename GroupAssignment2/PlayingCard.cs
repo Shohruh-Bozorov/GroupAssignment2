@@ -37,12 +37,28 @@ namespace GroupAssignment2
 		/// </summary>
 		string FaceOrValue
 		{
-			get
-			{
+            get
+            {
+                switch (Value)
+                {
+                    
+                    case PlayingCardValue.Knight:
+                        break;
+                    case PlayingCardValue.Queen:
+                        break;
+                    case PlayingCardValue.King:
+                        break;
+                    case PlayingCardValue.Ace:
+                        break;
+                    default: return "Value";
+                        
+                }
+				return "Face";
+            }
+
 				//YOUR CODE
 				//to return "Face" or "Value"
 				//Use switch expression
-			}
 		}
 		public override string ToString() => $"{Value} of {Color}, a {BlackOrRed} {FaceOrValue} card";
 
@@ -51,6 +67,7 @@ namespace GroupAssignment2
 		/// </summary>
 		public PlayingCard()
 		{
+		
 			//YOUR CODE
 			// write a constructor that generates a random card.
 			// I.e., PlayingCard card1 = new PlayingCard(); generates a random card.

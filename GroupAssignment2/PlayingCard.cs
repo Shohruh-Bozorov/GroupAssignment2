@@ -51,7 +51,7 @@ namespace GroupAssignment2
                     case PlayingCardValue.Ace:
                         break;
                     default: return "Value";
-                        
+                       
                 }
 				return "Face";
             }

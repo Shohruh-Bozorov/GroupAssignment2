@@ -21,9 +21,10 @@ namespace GroupAssignment2
             myDeck.Shuffle();
             Console.WriteLine($"\nA shuffled deck with {myDeck.Count} cards:");
             Console.WriteLine(myDeck);
- 
-            //For the Challange
+
+            
             /*
+            //For the Challange
             Console.WriteLine($"\nRemove three card from the top:");
             Console.WriteLine(myDeck.GetTopCard());
             Console.WriteLine(myDeck.GetTopCard());

@@ -13,7 +13,7 @@ namespace GroupAssignment2
 	public enum PlayingCardValue
 	{
 		Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
-		Knight, Queen, King, Ace                // Poker Value order
+		Knight, Queen, King, Ace               // Poker Value order
 	}
 	public class PlayingCard
 	{
@@ -43,38 +43,20 @@ namespace GroupAssignment2
 
 			get
 			{
-				switch (Value)
+				// switch expression
+				string faceOrValue = Value switch
 				{
+					PlayingCardValue.Ace => faceOrValue = "Face",
+					PlayingCardValue.Knight => faceOrValue = "Face",
+					PlayingCardValue.Queen => faceOrValue = "Face",
+					PlayingCardValue.King => faceOrValue = "Face",
+					_ => faceOrValue = "Value",
+				};
 
-					case PlayingCardValue.Knight:
-						break;
-					case PlayingCardValue.Queen:
-						break;
-					case PlayingCardValue.King:
-						break;
-					case PlayingCardValue.Ace:
-						break;
-					default: return "Value";
+				return faceOrValue;
 
-				}
-				return "Face";
-
-
-
-				/*
-				 // switch expression
-				String FaceOrValue = Value switch
-						{
-					PlayingCardValue.Ace => FaceOrValue = "Face",
-							PlayingCardValue.Knight => FaceOrValue = "Face",
-							PlayingCardValue.Queen => FaceOrValue = "Face",
-							PlayingCardValue.King => FaceOrValue = "Face",
-							_ => FaceOrValue = "Value",
-						};
-					return FaceOrValue;
-
-				*/
 			}
+			
 
 		}
 		public override string ToString() => $"{Value} of {Color}, a {BlackOrRed} {FaceOrValue} card";
@@ -87,16 +69,11 @@ namespace GroupAssignment2
 
 			//YOUR CODE
 			// write a constructor that generates a random card.
-			// I.e., PlayingCard card1 = new PlayingCard(); generates a random card.
+			// I.e., PlayingCard card1 = new PlayingCard(); generates a random card
 
-			//PlayingCard card1 = new PlayingCard();
-			Random randCard = new Random();
-			Color = (PlayingCardColor)randCard.Next(0, 4);
-			Value = (PlayingCardValue)randCard.Next(1, 15);
-
-
-
-
+			Random randNr = new Random();
+			Color = (PlayingCardColor)randNr.Next(0, 4);
+			Value = (PlayingCardValue)randNr.Next(1, 15);
 
 
 		}
